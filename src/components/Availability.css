@@ -1,0 +1,153 @@
+/* src/Availability.css */
+.availability-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .availability-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 20px;
+  }
+  
+  .availability-header h1 {
+    margin: 0;
+  }
+  
+  .settings-button {
+    background-color: #a0caf7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .availability-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .availability-details {
+    flex: 3;
+    margin-right: 20px;
+  }
+  
+  .availability-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .timezone-switch-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+  }
+  
+  .timezone-switch {
+    display: flex;
+    align-items: center;
+  }
+  
+  .timezone-switch label {
+    margin-right: 10px;
+  }
+  
+  .save-button,.schedule-button  {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .availability-form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .day-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .day-checkbox {
+    flex: 1;
+  }
+  
+  .time-input-card {
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  .time-input-card label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .add-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .calendar-card {
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .calendar-container {
+    margin-bottom: 20px;
+  }
+  
+  .calendar-settings {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .calendar-settings label {
+    margin-bottom: 10px;
+  }
+  
+  .schedule-override {
+    margin-top: 20px;
+  }
+  .time-input-card.bordered {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: px;
+  }

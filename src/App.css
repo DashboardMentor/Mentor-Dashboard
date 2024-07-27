@@ -1,38 +1,225 @@
-.App {
-  text-align: center;
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+.navbar-left {
+  display: flex;
+  align-items: left;
+}
+
+.navbar-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+.navbar-search {
+  display: flex;
+  align-items: left;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.search-icon {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #007bff;
+}
+
+.search-bar {
+  border: none;
+  outline: none;
+  width: 500px;
+  
+}
+
+.navbar-right a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar-right .icon {
+  margin: 0 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.navbar-right .host-btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+}
+
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.welcome-box {
+  position: relative;
+  background-color: #e0bbff;
+  padding: 20px;
+  text-align: left;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  height: 100px;
+}
+
+.welcome-content {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.share-template-btn {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.top-right-image {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 120px;
+  height: 120px;
+}
+
+.next-steps {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px; /* Space between Next Steps and Get Started */
+}
+
+.steps-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.step {
+  width: 30%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 20px; /* Space between steps */
+}
+
+.step:last-child {
+  margin-right: 0;
+}
+
+.step-image {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.additional-steps {
+  background-color: #f0f0f0; /* Light grey background */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.steps-section-horizontal {
+  display: flex; /* Arrange items in a row */
+  gap: 20px; /* Space between each section */
+}
+
+.horizontal-step {
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  align-items: left; /* Center items horizontally */
+  background-color: #fff; /* White background for each horizontal step */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex: 1; /* Ensure equal width for each step */
+}
+
+.horizontal-step-icon {
+  font-size: 2em;
+  color: #007bff;
+  margin-right: 10px; /* Space between the icon and the text */
+}
+
+.horizontal-step-content {
+  text-align: left; /* Center the text */
+}
+
+.horizontal-step-text {
+  margin: 0;
+}
+
+.horizontal-step-description {
+  margin: 5px 0 0 0; /* Space above and below the description */
+  color: #666; /* Slightly muted text color */
+}
+
+/*sidebar*/
+.sidebar {
+  width: 200px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-right: 1px solid #ddd;
+}
+
+.tick-circle {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: #fff;
+  margin: 0 auto 20px auto;
 }
 
-.App-link {
-  color: #61dafb;
+.tick-icon {
+  font-size: 1.5em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.sidebar nav a {
+  display: block;
+  margin: 10px 0;
+  text-decoration: none;
+  color: #333;
 }

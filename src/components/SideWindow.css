@@ -1,0 +1,74 @@
+.sidewindow-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(31, 41, 55, 0.5);
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .sidewindow-container {
+    background-color: white;
+    width: 33.3333%;
+    height: 100%;
+    padding: 24px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidewindow-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .sidewindow-field {
+    margin-bottom: 16px;
+  }
+  
+  .sidewindow-label {
+    display: block;
+    color: #4b5563;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .sidewindow-input {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #d1d5db;
+    color: #4b5563;
+  }
+  
+  .sidewindow-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .sidewindow-save {
+    background-color: #2563eb;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .sidewindow-save:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .sidewindow-cancel {
+    background-color: #6b7280;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .sidewindow-cancel:hover {
+    background-color: #4b5563;
+  }
+  

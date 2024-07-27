@@ -1,0 +1,107 @@
+/* bookings.css */
+.bookings {
+    padding: 20px;
+  }
+  
+  .bookings h1 {
+    font-size: 24px;
+  }
+  
+  .manage-services {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  hr {
+    margin: 20px 0;
+  }
+  
+  .booking-sections {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .section {
+    flex: 1;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+  }
+  .section-content {
+    display: flex;
+    flex-direction: column; /* Stack number and text vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+  
+  .section-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000080; /* Navy blue */
+    margin-bottom: 5px; /* Space between number and text */
+  }
+  
+  .section p {
+    margin: 0; /* Remove default margin for p tags */
+    font-size: 16px;
+  }
+  .section:last-child {
+    margin-right: 0;
+  }
+  
+  .section-icon {
+    margin-right: 8px;
+    width: 70px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+  }
+  
+  .booking-buttons {
+    display: flex;
+
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+  
+  .booking-buttons button {
+    flex: 1;
+    padding: 8px 12px; 
+    max-width: 150px;
+    margin-right: 10px;
+    background-color: #fff;
+  color: #000080; /* Navy blue */
+  border: 2px solid #000080;
+    
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+  
+  .booking-buttons button:hover {
+    background-color: #daeafb;
+  }
+  
+  .booking-buttons button:last-child {
+    margin-right: 0;
+  }
+  
+  .upcoming-box {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: 15px;
+  }
+  
+  .upcoming-box img {
+    max-width: 270px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
