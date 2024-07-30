@@ -19,11 +19,11 @@ const Sidebar = () => {
       <nav>
         <Link to="/dashboard">Dashboard</Link>
         <Link to="/profile">Profile</Link>
-        <Link to="/socialmediakit">Social Media Kit</Link>
+        {/* <Link to="/socialmediakit">Social Media Kit</Link> */}
         <Link to="/services">Services</Link>
         <Link to="/booking">Booking</Link>
         <Link to="/availability">Availability</Link>
-        <Link to="/payments">Payments</Link>
+        <Link to="/payment">Payment</Link>
         <Link to="/feedback">Feedback</Link>
       </nav>
     </div>

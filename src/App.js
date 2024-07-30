@@ -9,6 +9,8 @@ import Sidebar from './components/Sidebar';
 import Availability from './components/Availability';
 import Bookings from './components/Bookings';
 import Services from './components/Services';
+import Payment  from './components/Payment';
+
 
 const App = () => {
   return (
@@ -24,6 +26,7 @@ const App = () => {
               <Route path="/availability" element={<Availability />} />
               <Route path="/booking" element={<Bookings />} />
               <Route path="/services" element={<Services />} />
+              <Route path ="/Payment" element={<Payment/>}/>
             </Routes>
           </div>
         </div>
