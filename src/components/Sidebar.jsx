@@ -24,7 +24,7 @@ const Sidebar = () => {
         <Link to="/booking">Booking</Link>
         <Link to="/availability">Availability</Link>
         <Link to="/payment">Payment</Link>
-        <Link to="/feedback">Feedback</Link>
+        <Link to="/Feedback">Feedback</Link>
       </nav>
     </div>
   );
