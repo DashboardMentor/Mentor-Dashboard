@@ -6,7 +6,6 @@
 }
 
 .payments.blur {
-  /* filter: blur(5px); */
   pointer-events: none;
 }
 
@@ -144,12 +143,12 @@ h2 {
   top: 0;
   right: 0;
   height: 100%;
-  width: 400px; /* Increased from 30% for better readability */
+  width: 400px;
   background-color: #ffffff;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
-  padding: 30px; /* Increased padding */
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
   z-index: 1000;
-  overflow-y: auto; /* Allow scrolling if content is too long */
+  overflow-y: auto;
 }
 
 .side-window-content {
@@ -159,7 +158,7 @@ h2 {
 
 .side-window h3 {
   margin-bottom: 25px;
-  font-size: 24px; /* Larger title */
+  font-size: 24px;
 }
 
 .side-window label {
@@ -180,7 +179,7 @@ h2 {
 .side-window-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px; /* Add some space above buttons */
+  margin-top: 20px;
 }
 
 .side-window-buttons button {

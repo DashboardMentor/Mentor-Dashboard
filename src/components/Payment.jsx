@@ -38,41 +38,45 @@ const Payments = () => {
   };
 
   return (
-    <div className={`payments ${isSideWindowOpen ? 'blur' : ''}`}>
-      <h2>Payments</h2>
-      <div className="main-section">
-        <div className="left-section">
-          <div className="payment-summary">
-            <div className="payment-box">
-              <p className="amount">₹ 0.00</p>
-              <p className="description">Payment Received</p>
+    <div className="container">
+      {!isSideWindowOpen && (
+        <div className="payments">
+          <h2>Payments</h2>
+          <div className="main-section">
+            <div className="left-section">
+              <div className="payment-summary">
+                <div className="payment-box">
+                  <p className="amount">₹ 0.00</p>
+                  <p className="description">Payment Received</p>
+                </div>
+                <div className="payment-box">
+                  <p className="amount">₹ 0.00</p>
+                  <p className="description">Pending payments</p>
+                </div>
+              </div>
+              <div className="payment-table">
+                <div className="tabs">
+                  <button className="tab active">Received</button>
+                  <button className="tab">Pending</button>
+                </div>
+                <div className="table-content">
+                  <div className="no-data">
+                    <img src="/path/to/image.png" alt="No data available" />
+                    <p>No data available</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="payment-box">
-              <p className="amount">₹ 0.00</p>
-              <p className="description">Pending payments</p>
-            </div>
-          </div>
-          <div className="payment-table">
-            <div className="tabs">
-              <button className="tab active">Received</button>
-              <button className="tab">Pending</button>
-            </div>
-            <div className="table-content">
-              <div className="no-data">
-                <img src="/path/to/image.png" alt="No data available" />
-                <p>No data available</p>
+            <div className="right-section">
+              <button className="add-payment-details" onClick={toggleSideWindow}>Click here to add payment details</button>
+              <div className="guidelines">
+                <h3>Guidelines</h3>
+                <p>1. You can add your account details here. Please note that the payments won't be processed if this section is not completed. <a href="#">View More</a></p>
               </div>
             </div>
           </div>
         </div>
-        <div className="right-section">
-          <button className="add-payment-details" onClick={toggleSideWindow}>Click here to add payment details</button>
-          <div className="guidelines">
-            <h3>Guidelines</h3>
-            <p>1. You can add your account details here. Please note that the payments won't be processed if this section is not completed. <a href="#">View More</a></p>
-          </div>
-        </div>
-      </div>
+      )}
       {isSideWindowOpen && (
         <div className="side-window">
           <div className="side-window-content">
@@ -104,7 +108,6 @@ const Payments = () => {
             </form>
           </div>
         </div>
-
       )}
     </div>
   );
