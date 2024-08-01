@@ -1,17 +1,25 @@
 import React, { useState } from 'react';
 import './Profile.css';
 import Photo from './photo.jpg';
-import SideWindow from './SideWindow';
+import ProfileEditWindow from './ProfileEditWindow';
+import DomainEditWindow from './DomainEditWindow';
+import WorkEditWindow from './WorkEditWindow';
+import EducationEditWindow from './EducationEditWindow';
 
 const Profile = () => {
   const [showSideWindow, setShowSideWindow] = useState(false);
   const [currentEditSection, setCurrentEditSection] = useState(null);
   const [profileData, setProfileData] = useState({
-    name: 'XC SD',
-    role: 'Executive',
+    firstName: 'XC',
+    lastName: 'SD',
+    userName: 'bvhy1234',
+    gender: 'Male',
     organization: 'U Digital',
     industry: 'Agriculture and Allied Industries',
     experience: '4 Years',
+    bio: "I'm an executive at U Digital, bringing 4 years of experience in the Agriculture and Allied Industries to the table. I'm passionate about using technology to empower farmers and drive sustainable growth in the sector. As a mentor, I'm eager to share my knowledge and insights to help others navigate the challenges and opportunities in this dynamic field.",
+    language: 'English',
+    socialLinks: 'https://www.linkedin.com/in/temp-profile-37352a26',
   });
   const [domainData, setDomainData] = useState({
     domain: 'Engineering, Technology & Data',
@@ -78,6 +86,22 @@ const Profile = () => {
       default:
         break;
     }
+    handleClose();
+  };
+
+  const renderEditWindow = () => {
+    switch (currentEditSection) {
+      case 'profile':
+        return <ProfileEditWindow data={profileData} handleSave={handleSave} handleClose={handleClose} />;
+      case 'domain':
+        return <DomainEditWindow data={domainData} handleSave={handleSave} handleClose={handleClose} />;
+      case 'work':
+        return <WorkEditWindow data={workData} handleSave={handleSave} handleClose={handleClose} />;
+      case 'education':
+        return <EducationEditWindow data={educationData} handleSave={handleSave} handleClose={handleClose} />;
+      default:
+        return null;
+    }
   };
 
   return (
@@ -96,16 +120,16 @@ const Profile = () => {
         </button>
       </div>
       <div className="profile-details">
-        <h2 className="profile-name">{profileData.name}</h2>
+        <h2 className="profile-name">{profileData.firstName} {profileData.lastName}</h2>
+        <p className="profile-info">User Name: {profileData.userName}</p>
+        <p className="profile-info">Gender: {profileData.gender}</p>
         <p className="profile-info">Current Role: {profileData.role}</p>
         <p className="profile-info">Current Organisation: {profileData.organization}</p>
         <p className="profile-info">Current Industry: {profileData.industry}</p>
         <p className="profile-info">Total years of experience: {profileData.experience}</p>
       </div>
       <div className="profile-description">
-        <p>
-          I'm an executive at U Digital, bringing 4 years of experience in the Agriculture and Allied Industries to the table. I'm passionate about using technology to empower farmers and drive sustainable growth in the sector. As a mentor, I'm eager to share my knowledge and insights to help others navigate the challenges and opportunities in this dynamic field.
-        </p>
+        <p>{profileData.bio}</p>
       </div>
       <div className="profile-section">
         <div className="profile-section-header">
@@ -115,8 +139,8 @@ const Profile = () => {
           <img src="src/images/img.jpg" alt="LinkedIn" className="profile-social-media-icon" />
           <span className="profile-social-media-text">LinkedIn</span>
         </div>
-        <a href="https://www.linkedin.com/in/temp-profile-37352a26" className="profile-social-media-link">
-          https://www.linkedin.com/in/temp-profile-37352a26
+        <a href={profileData.socialLinks} className="profile-social-media-link">
+          {profileData.socialLinks}
         </a>
       </div>
       <div className="profile-section">
@@ -176,22 +200,7 @@ const Profile = () => {
           ))}
         </ul>
       </div>
-      <SideWindow
-        show={showSideWindow}
-        handleClose={handleClose}
-        data={
-          currentEditSection === 'profile'
-            ? profileData
-            : currentEditSection === 'domain'
-            ? domainData
-            : currentEditSection === 'work'
-            ? workData
-            : currentEditSection === 'education'
-            ? educationData
-            : {}
-        }
-        handleSave={handleSave}
-      />
+      {showSideWindow && renderEditWindow()}
     </div>
   );
 };

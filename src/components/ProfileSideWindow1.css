@@ -1,0 +1,122 @@
+/* ProfileSideWindow1.css */
+
+.side-window {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.side-window.visible {
+  right: 0;
+}
+
+.side-window-content {
+  padding: 20px;
+}
+
+.side-window-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.side-window-header h2 {
+  margin: 0;
+}
+
+.side-window-close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.side-window-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.profile-photo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-photo-preview {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.gender-options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gender-options label {
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.gender-options input[type="radio"] {
+  margin-right: 5px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.back-button,
+.save-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.back-button {
+  background-color: #ddd;
+  color: #333;
+}
+
+.save-button {
+  background-color: #007bff;
+  color: white;
+}
