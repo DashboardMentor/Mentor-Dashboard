@@ -19,12 +19,15 @@
   }
   
   .settings-button {
-    background-color: #a0caf7;
+    background-color: #007bff;
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 20px;
+  }
+  .settings-button:hover{
+    background-color: #064f9e;
   }
   
   .availability-card {

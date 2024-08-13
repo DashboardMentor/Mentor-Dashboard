@@ -3,15 +3,25 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './Availability.css';
+import AvailabilitySettings from './AvailabilitySettings';
 
 const Availability = () => {
   const [startDate, setStartDate] = useState(new Date());
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+      
+  const openSettings = () => {
+    setModalIsOpen(true);
+  };
 
+  const closeSettings = () => {
+    setModalIsOpen(false);
+  };
   return (
     <div className="availability-container">
       <div className="availability-header">
         <h1>Availability</h1>
-        <button className="settings-button">Settings</button>
+        <button className="settings-button" onClick={openSettings}>Settings</button>
+        <AvailabilitySettings isOpen={modalIsOpen} onRequestClose={closeSettings} />
       </div>
       <div className="availability-card">
         <div className="availability-details">

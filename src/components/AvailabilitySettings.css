@@ -1,0 +1,51 @@
+#notice-dropdown{
+    padding: 15px;
+    width: 50vw;
+    font-size: 15px;
+    border-radius: 6px;
+}
+#booking-dropdown{
+    padding: 15px;
+    width: 50vw;
+    margin-bottom: 15px;
+    font-size: 15px;
+    border-radius: 6px;
+}
+.booking{
+    width: 100vw;
+}
+.heading{
+    margin-top: 20px;
+}
+.notice-period{
+    margin: 0 0 20px 0;
+    font-size: 18px;
+}
+.booking-period{
+    margin: 30px 0 20px 0;
+    font-size: 18px;
+}
+.close{
+    padding: 13px 20px;
+    font-size: 15px;
+    border: 2px solid #273747;
+    background-color: white;
+    margin-left: 15px;
+    border-radius: 30px;
+    color: #273747;
+    cursor: pointer;
+}
+.save{
+    padding: 13px 20px;
+    font-size: 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    margin-right: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
