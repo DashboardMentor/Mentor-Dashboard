@@ -1,3 +1,4 @@
+/* Sidebar.css */
 /* App.css */
 body {
   font-family: Arial, sans-serif;
@@ -76,6 +77,7 @@ body {
 .main-content {
   flex: 1;
   padding: 20px;
+
 }
 
 .welcome-box {
@@ -222,4 +224,94 @@ body {
   margin: 10px 0;
   text-decoration: none;
   color: #333;
+}
+
+.container{
+  display:flex;
+  
+}
+.sidebar-container {
+  padding: 2px;
+  width: 300px;
+  height: 100vh;
+  border: 1px solid transparent;
+}
+
+.logo-container {
+  text-align: center;
+  padding-bottom: 16px;
+  cursor: pointer;
+}
+
+.logo-title {
+  font-weight: bold;
+}
+
+.logo-subtitle {
+  font-size: 0.875rem;
+  color: gray;
+}
+
+.social-icons-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 16px;
+}
+
+.social-icon {
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+  background-color: #bbdefb;
+}
+
+.menu-item {
+  display: flex;
+  padding: 8px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+  background-color: #bbdefb;
+  color: #1e88e5;
+}
+
+.menu-item-active {
+  background-color: #bbdefb;
+  color: #1e88e5;
+}
+
+.menu-item-icon {
+  padding-right: 12px;
+}
+
+.menu-item-text {
+  font-size: 1rem;
+}
+
+.faq-item {
+  display: flex;
+  padding: 8px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #e57373;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.faq-item:hover {
+  background-color: #ffebee;
+  color: #ef5350;
+}
+
+.faq-item-active {
+  background-color: #ffebee;
+  color: #ef5350;
 }

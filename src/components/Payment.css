@@ -27,7 +27,7 @@ h2 {
 
 .payment-summary {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-bottom: 20px;
 }
 
@@ -219,4 +219,62 @@ h2 {
 
 .side-window .close-button:focus {
   outline: none;
+}
+@media (max-width: 768px) {
+  .main-section {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; /* Center the entire main section */
+    width: 100%; /* Center aligns the content */
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .guidelines {
+    order: 3; /* Ensures guidelines appear below other elements */
+  }
+}
+
+@media (max-width: 480px) {
+  .guidelines {
+    padding: 15px;
+    font-size: 14px;
+    order: 3;
+    margin-top: 15px;
+  }
+
+  .right-section {
+    order: 2;
+  }
+
+  .left-section {
+    order: 1;
+  }
+
+  .payment-box .amount {
+    font-size: 28px;
+  }
+
+  .payment-box .description {
+    font-size: 14px;
+  }
+
+  .side-window {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .side-window h3 {
+    font-size: 20px;
+  }
+
+  .side-window-buttons button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 }

@@ -1,0 +1,226 @@
+/* Custom checkbox styling */
+.day-checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1.8px solid #007bff; /* Blue border color */
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .day-checkbox input[type="checkbox"]:checked {
+    background-color: #007bff; /* Blue background for checked state */
+    border-color: #007bff; /* Blue border when checked */
+  }
+  
+  .day-checkbox input[type="checkbox"]:checked::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .availability-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+    }
+    
+    .availability-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .settings-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .availability-card {
+      display: flex;
+      gap: 20px;
+    }
+    
+  .calendar-card {
+      flex: 1;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: white;
+      min-height: 80vh;
+      max-height: 122vh;
+      margin-top: 20px;
+    }
+    .availability-details{
+      flex: 1;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: white;
+      width: 50vw;
+    }
+    
+    .timezone-switch-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: transparent;
+    }
+    
+    .timezone-switch {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .save-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .availability-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .day-card {
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+    
+    .day-checkbox {
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: block;
+    }
+    
+    .time-slots-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    
+    .time-slot {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .time-input-card {
+      flex: 1;
+      border: none;
+    }
+    .time-input-card:hover{
+      cursor: pointer;
+      background-color: rgb(235, 234, 234);
+    }
+    
+    .bordered {
+      border: 1px solid #ccc;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    
+    .add-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .add-button:hover {
+      background-color: #0056b3;
+    }
+    .pura-card{
+      display: flex;
+    }
+    .schedule-button  {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+    .schedule{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      
+    }
+    .schedule-details{
+      margin: auto;
+    }
+  .highlighted-day {
+    background-color: rgb(246, 139, 139) !important;
+    color: white !important;
+    border-radius: 50%;
+  }
+  .past-day {
+    color: grey;
+  }
+  
+  .highlighted-day {
+    background-color: #ffeb3b; /* Example color for highlighted days */
+    color: black;
+  }
+  .schedule-details {
+    text-align: center;
+    max-height: 300px; /* Set the maximum height to display 4 days comfortably */
+    overflow-y: auto;  /* Add a vertical scrollbar when content exceeds the max height */
+    /* padding: 10px; */
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,0.2); /* Optional: Add some inner shadow for aesthetics */
+  }
+  
+  .schedule-override {
+    margin-bottom: 10px; /* Space between the days */
+  }
+  .custom{
+    text-align: center;
+  }
+  .red-dot-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px; /* Adjust font size as needed */
+  }
+  .custom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .red-dot {
+    width: 10px;  /* Size of the dot */
+    height: 10px; /* Size of the dot */
+    background-color: rgb(246, 139, 139);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px; /* Space between the dot and the text */
+  }
+  

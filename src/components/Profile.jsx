@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Profile.css';
 import Photo from './photo.jpg';
-import Img from './img.jpg';
 import ProfileEditWindow from './ProfileEditWindow';
 import DomainEditWindow from './DomainEditWindow';
 import WorkEditWindow from './WorkEditWindow';
@@ -11,8 +10,8 @@ const Profile = () => {
   const [showSideWindow, setShowSideWindow] = useState(false);
   const [currentEditSection, setCurrentEditSection] = useState(null);
   const [profileData, setProfileData] = useState({
-    firstName: 'ABC',
-    lastName: 'XYZ',
+    firstName: 'XC',
+    lastName: 'SD',
     userName: 'bvhy1234',
     gender: 'Male',
     organization: 'U Digital',
@@ -51,22 +50,23 @@ const Profile = () => {
     ],
   });
   const [educationData, setEducationData] = useState({
-    degree: 'btech',
-    university: 'I-Stem',
-    joinDate: '2016',
-    endDate: '2020',
-    achievements: [],
+    degree: 'Bachelor of Technology in Computer Science',
+    university: 'XYZ University',
+    graduationYear: '2019',
+    achievements: [
+      'Graduated with honors.',
+      'Top 10% of the class.',
+      'Member of the university coding club.',
+    ],
   });
 
   const handleEditClick = (section) => {
     setCurrentEditSection(section);
     setShowSideWindow(true);
-    document.body.classList.add('hidden');  // Disable scrolling
   };
 
   const handleClose = () => {
     setShowSideWindow(false);
-    document.body.classList.remove('hidden');  // Re-enable scrolling
   };
 
   const handleSave = (data) => {
@@ -136,7 +136,7 @@ const Profile = () => {
           <h3 className="profile-section-title">Social Media Handles</h3>
         </div>
         <div className="profile-social-media">
-          <img src={Img} alt="LinkedIn" className="profile-social-media-icon" />
+          <img src="src/images/img.jpg" alt="LinkedIn" className="profile-social-media-icon" />
           <span className="profile-social-media-text">LinkedIn</span>
         </div>
         <a href={profileData.socialLinks} className="profile-social-media-link">
@@ -151,7 +151,6 @@ const Profile = () => {
           </button>
         </div>
         <div className="profile-info">Domain: {domainData.domain}</div>
-        <div className="profile-info">Topics:</div>
         <div className="profile-tags">
           {domainData.topics.map((topic, index) => (
             <span key={index} className="profile-tag">
@@ -159,7 +158,6 @@ const Profile = () => {
             </span>
           ))}
         </div>
-        <div className="profile-info">Skills:</div>
         <div className="profile-tags">
           {domainData.skills.map((skill, index) => (
             <span key={index} className="profile-tag">
@@ -192,28 +190,16 @@ const Profile = () => {
             Edit
           </button>
         </div>
-        <div className="profile-info">{educationData.university}</div>
-        <div className="profile-info">{educationData.degree}</div>
-        <div className="profile-info-dates">
-          <div className="profile-info-date">
-            <span>{educationData.joinDate}</span>
-            <span>Join date</span>
-          </div>
-          <div className="profile-info-separator">—</div>
-          <div className="profile-info-date">
-            <span>{educationData.endDate}</span>
-            <span>End date</span>
-          </div>
-        </div>
-        {educationData.achievements.length > 0 && (
-          <ul className="profile-list">
-            {educationData.achievements.map((achievement, index) => (
-              <li key={index}>{achievement}</li>
-            ))}
-          </ul>
-        )}
+        <div className="profile-info">Degree: {educationData.degree}</div>
+        <div className="profile-info">University: {educationData.university}</div>
+        <div className="profile-info">Graduation Year: {educationData.graduationYear}</div>
+        <div className="profile-info">Achievements:</div>
+        <ul className="profile-list">
+          {educationData.achievements.map((achievement, index) => (
+            <li key={index}>{achievement}</li>
+          ))}
+        </ul>
       </div>
-      {showSideWindow && <div className="modal-overlay"></div>}
       {showSideWindow && renderEditWindow()}
     </div>
   );
